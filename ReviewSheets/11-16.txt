@@ -1,0 +1,72 @@
+Linked Lists:
+
+Consider the following definitions
+
+typedef struct node node_t;
+
+struct node {
+  int value;
+  node_t* next;
+};
+
+0: Write a function which given a pointer to a list and an integer,
+   appends a node to the front of the list, with the
+   given integer value. Then, modify the list to point
+   to the new node
+
+void addNode (int val , node_t ** list) {
+
+
+
+
+
+
+
+
+}
+
+1: Write a function that prints out the contents of a list
+
+void printList(node_t* list){
+
+
+
+
+
+
+
+}
+
+
+2: Write a function that sums all of the node of the list
+int sum_list(node_t* list){
+
+
+
+
+
+
+
+
+}
+
+3: Write a function that given two lists appends the second
+   to the end of the first list
+void appendLists(node_t* list1, node_t* list2){
+
+
+
+
+
+
+
+}
+
+
+4: The previous function requires a loop to get to the last
+   element of the first list. You can design a list such that
+   you don't need a loop to append two lists.
+   
+   How would you design such a list.  After doing so, write a
+   function to append two lists
+

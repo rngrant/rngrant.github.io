@@ -1,0 +1,234 @@
+Characters Strings and I/O
+
+0: The following function calls supposedly write a single
+    new-line character, but some are incorrect. Identify
+    which calls don't work
+
+    a.) printf("%c",'\n');
+    b.) printf("%c", "\n");
+    c.) printf("%s", '\n');
+    d.) printf("%s", "\n");
+    e.) printf('\n');
+    f.) printf("\n");
+    g.) putchar('\n');
+    h.) putchar("\n");
+
+
+1: What will be the value of thst string s1 after the following
+    program fragment has been executed?
+
+    strcpy(s1, "computer");
+    strcpy(s2, "science");
+    if (strcmp(s1,s2)<0)
+       strcat(s1,s2);
+    else
+	strcat(s2,s1);
+    s1[strlen(s1)-6] = '\0';
+
+2: Write a function that takes a string ret, and an int size and
+    reads data into that string until it is full, or the user enters a
+    new line. Skip white space
+    
+void skip_whitespace(char * ret,int size){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+3: Write a function that reads in a given number of characters, then
+ prints our the result. If the char is an upper or lower case
+ character, switch the case. If the char is a digit print that number
+ of $ characters.
+
+void switch_case(int length){
+     
+
+
+
+
+
+}
+
+
+2D Arrays:
+
+4: Assume ROWS and COLUMNS are defined constants. Write a program
+ void add_matrices(int arr1[ROWS][COLUMNS], int arr2[ROWS][COLUMNS])
+ that performs matrix addition(adding numbers in corresponding 
+ indices)changes arr1 to that matrix.
+ 
+ void add_matrices(int arr1[ROWS][COLUMNS], int arr2[ROWS][COLUMNS]){
+
+
+
+
+
+}
+
+5: Write a function add_rows, which takes in a 2D array, and a array
+ with COLUMNS rows row_sum, and stores the sum of each row in
+ row_sum.
+
+void add_rows(int arr[ROWS][COLUMNS],int row_sum[COLUMNS]){
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+6:
+Write a program fragment that declares
+an 8x8 char array named checker_board then
+uses a loop to store the following data into
+the array
+
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+
+
+
+
+7: Write a function averagePoint, which takes a 2D array
+   of integers, and a location within that array, and
+   returns the integer which is the average of that point in the
+   array, and all adjacent points. If the point is on the edge of
+   the 2D array, you should only average the points within the
+   boundaries. If the point is outside of the 2D array, return
+   0. Assume ROWS and COLUMNS are defined to be the size of the array
+   you are working with
+
+int averagePoint(int grid[ROWS][COLUMNS] , int pointRow, int pointColumn){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+8: Write a function average2DArray, which set every value to be the
+   average of itself and its neighbors, using the function we wrote
+   above.Assume ROWS and COLUMNS are defined to be the size of the array
+   you are working with.
+   
+
+void average2DArray(int grid[ROWS][COLUMNS]){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+There is a subtle danger here, can you catch it? Hint, applying this
+function to
+
+0  0 0
+0 12 0
+0  0 0
+
+should result in
+
+3 2 3          3 2 3
+2 1 2   Not    2 2 1
+3 2 3          1 1 1
+
+Image Processing/ Structs:
+
+9: Modify  the functions you wrote above to work on pictures.
+
+Pixel averagePixels(Picture * pic, int pixelRow, int pixelColumn){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+void averagePicture(Picture * pic){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+10: Write a program void rotate(Picture* pic) that rotates the RGB
+values of every pixel. So the R value gets stored in the G spot,
+the G value in the B spot and the B value in the R spot.
+Nothing is returned but pic should point to this new image
+by the end of the program.  
+

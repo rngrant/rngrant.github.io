@@ -1,0 +1,223 @@
+2D Arrays:
+
+0:
+Write a program fragment that declares
+an 8x8 char array named checker_board then
+uses a loop to store the following data into
+the array
+
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+
+
+
+
+1: Write a function averagePoint, which takes a 2D array
+   of integers, and a location within that array, and
+   returns the integer which is the average of that point in the
+   array, and all adjacent points. If the point is on the edge of
+   the 2D array, you should only average the points within the
+   boundaries. If the point is outside of the 2D array, return
+   0. Assume ROWS and COLUMNS are defined to be the size of the array
+   you are working with
+
+int averagePoint(int grid[ROWS][COLUMNS] , int pointRow, int pointColumn){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+2: Write a function average2DArray, which set every value to be the
+   average of itself and its neighbors, using the function we wrote
+   above.Assume ROWS and COLUMNS are defined to be the size of the array
+   you are working with.
+   
+
+void average2DArray(int grid[ROWS][COLUMNS]){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+There is a subtle danger here, can you catch it? Hint, applying this
+function to
+
+0  0 0
+0 12 0
+0  0 0
+
+should result in
+
+3 2 3          3 2 3
+2 1 2   Not    2 2 1
+3 2 3          1 1 1
+
+
+Image Processing/ Structs:
+
+3: Modify  the functions you wrote above to work on pictures.
+
+Pixel averagePixels(Picture * pic, int pixelRow, int pixelColumn){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+Pointers and Malloc:
+
+4: Write a function named duplicate that uses dynamic storage
+allocation to create a copy of a string. For example, the call
+
+p = duplicate(str);
+
+would allocate space for a string of the same length as str,
+copy the contents of str into the new string, and return a
+pointer to it. Have duplicate return a null pointer if the
+memory allocation fails.
+
+char * duplicate(char * str){
+
+
+
+
+}
+
+
+
+5: Write the following function:
+
+int * create_array(int n, int initial_value);
+
+The function should return a pointer to a dynamically
+allocated array with n members, each of which is
+initialized to initial_value. The return value should
+be NULL if the array can't be allocated
+
+int * create_array(int n, int initial_value){
+
+
+
+
+}
+
+Review:
+Binary:
+
+6.) Represent the following numbers as a 4 bit number
+in two's compliment notation
+
+A.) 5
+B.) -2
+C.)-7
+
+7.) Represent the following numbers in IEEE single-precision
+representation
+
+A.) 1.0 :
+
+
+B.) 3.25 :
+
+
+C.) -0.125:
+
+
+D.) 63.375:
+
+
+
+
+Bitwise operations:
+
+8.) Determine the integer that results from
+the following expressions
+A.) 7 & 5
+B.) 8 | 3
+C.) 9 << 2
+D.) 6 ^ 3
+E.) ~(-3)
+
+Unions:
+
+9.) Suppose that s is the following structure
+
+struct shape {
+       int shape_kind;
+       union
+       {
+       	     struct
+	     {
+		int height, width;
+	     } rectangle;
+	     struct
+	     {
+		int radius
+	     } circle;
+	}u;
+} s;
+
+
+Indicate which of the following statements are legal, and show how to
+repair the ones that aren't
+
+a.) s.shape_kind = 1;
+b.) s.height=25;
+c.) s.u.rectangle.width =8;
+d.) s.u.circle =5;

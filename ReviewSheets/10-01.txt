@@ -1,0 +1,65 @@
+The Preproccessor:
+0.) Write parameterized macros that compute the following values
+  a.) The cube of x.
+  b.) The remainder when n is divided by 4.
+  c.) 1 if the product of x and y is less than 100, 0 otherwise.
+
+
+1.) Let DOUBLE be the following macro:
+#define DOUBLE(X) 2*X
+
+a.) What is the value of DOUBLE(1+2)
+b.) What is the value of 4/DOUBLE(2)
+c.) Will this macro perform as expect? If not, fix it.
+
+Function pointers:
+2.) Write a function map, which takes an array, it's size, and a
+function that takes in an int and returns an int, and then updates
+the array such that the function is applied to every element.
+
+void map(int arr[],int size,int func (int)){
+
+
+
+
+
+
+
+
+}
+
+3.) Write a function apply, which takes an array, it's size, and a
+function that takes in two ints, and returns the result of iteratively applying the given function to all the elements in the array. Assume the size of the array given is always 2 or greater
+
+
+
+
+
+4.) What is the output of the following program
+#include <stdio.h>
+
+int f1 (int (*f) (int));
+int f2(int i);
+
+int main(void)
+{
+  printf("Answer: %d\n", f1(f2));
+  return 0;
+}
+  
+int f1(int (*f)(int))
+{
+  int n = 0;
+  while ((*f)(n))
+    {
+      n++;
+    }
+  
+  return n;
+  }
+  
+  int f2(int i)
+  {   
+    return i * i + i - 12;
+  }
+

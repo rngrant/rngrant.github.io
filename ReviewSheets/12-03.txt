@@ -1,0 +1,113 @@
+Bash:
+0: Write a script num_finals.sh that takes an integer as a command
+line argument, and returns an appropriate exclamation. i.e.
+./num_finals.sh 5
+>Oy vey
+./num_finals.sh 3
+>That seems manageable
+./num_finals.sh 0
+>You luck duck
+./num_finals.sh -1
+> Now thats just impossible
+
+
+#!/bin/bash
+
+
+
+
+
+
+
+
+
+
+1:Write a script that takes a file containing a list of single digits separated by newlines, echos the result of applying the previous script to each line, sorted in the file
+
+#!/bin/bash
+
+
+
+
+
+
+
+
+
+
+Command Line arguments /String manipulation:
+
+2: Given a string of ingredients in the form "applesauce,butter,clementines", i.e. strings separated by commas, write a function nth_ingredient, which takes a string of this form, and a number n, and returns the nth element in that list.  (Hint: use strtok). If n is larger than the number of elements in the list return null.
+
+char * nth_ingredient(char * list, int n){
+
+
+
+
+
+
+
+
+
+}
+
+
+3: Write the following function:
+bool test_extension (const char *file_name,
+     		     const char *extension);
+file_name points to a string containing a file name. The function should return true if the file's extension matches the string pointed to by extension, ignoring the case of letters. For example, the call test_extension("memo.txt", "TXT") would return true.
+(Hint: Use the toupper function, and strtok)
+bool test_extension (const char *file_name,
+     		     const char *extension){
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+Input Output:
+
+4: Write the following function:
+int line_length(const char *filename, int n);
+The function should return the length of the line n in the text file
+whose name is filename. If the line doesn't exist return 0;
+
+int line_length(const char *filename, int n){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+Combined review
+
+5:Given a stack with the following definition
+#define MAX_STACK_SIZE 50
+/* Size of all stack arrays */
+
+typedef struct {
+  int topPosition;
+  char * stackArray[MAX_STACK_SIZE];
+} stringStack;  
+
+
+and standard functions, write a function which takes a string similar
+to the type in problem 2, and stores it in the stack. Then, write a
+function that takes a stack, and writes its output to a file via
+popping 

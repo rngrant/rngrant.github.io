@@ -1,0 +1,222 @@
+Booleans:
+
+0.)  Write a function that takes 2 integers, and then returns true
+     if their product is divisible by 5 and 3. Can you write this
+     function without if statements?
+
+
+
+
+
+
+Loops:
+
+1. What output does the following program fragment produce?
+
+int i =1;
+while (i <= 128){
+  printf("%d\n ", i);
+  i *=2;
+}
+
+2. Translate the above program fragment into a single for loop
+
+
+
+
+
+
+
+
+3. Fix the error in the following program fragment
+
+
+  if (n%2== 0);
+  printf("n is even\n");
+
+
+4. Extra: What is the output of the following program fragment:
+
+int i,j;
+  int counter =0;
+  for (i =1 ;i <= 20; i++){
+    for (j=1; j<=i; j++){
+      counter++;
+    }
+  }
+  printf ("Counter: %d\n", counter);
+
+Could you do what this loop is doing with just one loop?
+
+Functions:
+
+5. The following function contains several errors. Fix them
+
+double triangle_area(double base, height)
+double product;
+{
+  product = base* height;
+  return product /2;
+}
+
+6.) Write a function num_digits(n) that returns the number of digits in n ( an int)
+
+
+
+
+
+
+
+
+7.) What will be the output of the following program
+
+# include <stdio.h>
+
+void swap (int a, int b);	// 1
+     	       	      		// 2
+int main(void)			// 3
+{   				// 4
+  int i =1, j =2;		// 5
+  \\Point A   			// 6
+  swap(i,j);			// 7
+  printf("i = %d, j = %d\n", i , j);// 8
+  \\ Point E  	      	       // 9
+  return 0;		       // 10
+} 	 		       // 11
+			       // 12
+void swap( int a , int b)      // 13
+{    	       	       	       // 14
+\\ Point B		       //15
+int temp = a;		       // 16
+\\ Point C 		       // 17
+  a = b;     		       // 18
+  b = temp;		       // 19
+  \\ Point D		       // 20
+}     			       // 21
+
+8.) Do the stack diagrams for points A, B, C, D and E above
+
+
+A:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+
+--- main
+   
+
+B:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+   
+
+
+C:
+Program Counter:
+
+The Stack	 Output
+=========	 =========
+
+
+
+--- main
+
+
+D:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+   
+
+E:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+   
+
+
+
+Pointers:
+
+9.) The above program has an intended purpose of swaping i and j, and then displaying them. Is this program correct for this purpose?
+If not, correct it.
+
+
+10.)
+The following function supposedly computes the sum and average of the numbers in the array arr, which has length n. avg and sum point to variables that the function should modify. Unfortunately. the function contains several errors: find and correct them.
+
+void avg_sum(double arr[], int n, double *avg, double sum){
+{
+int i;
+sum = 0.0;
+for (i = 0; i <n ; i++)
+    sum += arr[i];
+   avg = sum / n;
+}
+
+
+11.) Write a function that takes an integer array arr, with length n, and calculates and assigns the maximum and minimum values
+
+void max_min(int arr[],int n,int * min, int* max){
+
+
+
+
+
+
+
+
+
+
+}
+
+Arrays:
+
+12.) What will the following program fragment output
+
+int arr[] = {1,2,-3,4,5,8};		      
+  int min, max;
+  max_min(arr,4,&min,&max);
+  printf("min = %d, max = %d\n", min , max);
+
+13.) What will the following program fragment output
+
+int arr[] = {1,2,-3,4,5,8};
+int* a = &arr[3];
+printf("a[-2] = %d\n", a[-2]);
+
+
+
+
+Robot:
+
+14.) Write a function void twistAndShout(void) that makes
+a Scribbler twist (turn right then left) between 1 and 8 times and beep for .5 seconds at
+frequency 638 after all the twists in the iteration are completed. On the first iteration,
+the robot will turn left and right once, then beep.
+The second time, the robot will turn left and right twice
+then beep once. and so on.
+
+

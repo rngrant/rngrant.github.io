@@ -1,0 +1,137 @@
+
+Functions:
+1.) Write a function num_digits(n) that returns the number of digits in n ( an int)
+
+
+
+
+
+
+
+
+2.) What will be the output of the following program
+
+# include <stdio.h>
+
+void swap (int a, int b);	// 1
+     	       	      		// 2
+int main(void)			// 3
+{   				// 4
+  int i =1, j =2;		// 5
+  //Point A   			// 6
+  swap(i,j);			// 7
+  printf("i = %d, j = %d\n", i , j);// 8
+  // Point E  	      	       // 9
+  return 0;		       // 10
+} 	 		       // 11
+			       // 12
+void swap( int a , int b)      // 13
+{    	       	       	       // 14
+  // Point B		       //15
+int temp = a;		       // 16
+  // Point C 		       // 17
+  a = b;     		       // 18
+  b = temp;		       // 19
+  // Point D		       // 20
+}     			       // 21
+3.) Do the stack diagrams for points A, B, C, D and E above
+
+
+A:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+
+--- main
+   
+
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+   
+
+
+C:
+Program Counter:
+
+The Stack	 Output
+=========	 =========
+
+
+
+--- main
+
+
+D:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+   
+
+E:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+
+Pointers:
+
+4.) The above program has an intended purpose of swaping i and j, and then displaying them. Is this program correct for this purpose?
+If not, correct it.
+
+
+5.)
+The following function supposedly computes the sum and average of the numbers in the array arr, which has length n. avg and sum point to variables that the function should modify. Unfortunately. the function contains several errors: find and correct them.
+
+void avg_sum(double arr[], int n, double *avg, double sum){
+{
+int i;
+sum = 0.0;
+for (i = 0; i <n ; i++)
+    sum += arr[i];
+   avg = sum / n;
+}
+
+
+6.) Write a function that takes an integer array arr, with length n, and calculates and assigns the maximum and minimum values
+
+void max_min(int arr[],int n,int * min, int* max){
+
+
+
+}
+
+Arrays:
+
+7.) What will the following program fragment output
+
+int arr[] = {1,2,-3,4,5,8};		      
+  int min, max;
+  max_min(arr,4,&min,&max);
+  printf("min = %d, max = %d\n", min , max);
+
+8.) What will the following program fragment output
+
+int arr[] = {1,2,-3,4,5,8};
+int* a = &arr[3];
+printf("a[-2] = %d\n", a[-2]);

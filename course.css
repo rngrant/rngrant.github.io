@@ -1,0 +1,131 @@
+/*Sheet taken from Jerod Weinman:
+ http://www.cs.grinnell.edu/~weinman/
+
+ 8th December 2017 */
+.nop {}
+
+A:link {
+	  color:	blue;
+}
+
+A:visited {
+
+}
+
+BODY {
+	  margin-top:		24pt;
+	  margin-left:		4ex;
+	  margin-right:		4ex;
+	  background-color:	white;
+	  background:		white;
+	  color:			black;
+	  font-family:	Optima, sans-serif;
+}
+
+TABLE.header {
+    text-align: left;
+    width: 100%;
+    background-color: #ffd771;
+    border-top: medium solid black;
+    border-bottom: thin solid black;
+    padding: 3px;
+}
+
+
+DIV.title {
+    padding: 1ex;
+    background-color:	#66B6D9; /*#5DB1D5;*/ /*#6AA1B8;*/
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+DIV.title .coursename {
+    font-size: normal;
+}
+
+DIV.title .coursenum {
+    font-size: smaller;
+}
+
+DIV.title .coursesem {
+    font-size: smaller;
+}
+
+DIV.title .subtitle {
+    font-size: normal;
+    color: #ffe685;
+    font-weight: bold;
+}
+
+H1 {
+/*    border-top: medium solid black;*/
+    border-top-left-radius: 0.5em;                                              
+    border-top-right-radius: 0.5em;                                             
+    padding-left: 0.25em;                                                       
+    border-bottom: thin solid #147098; /*black;*/
+    background-color: #ffe299; /*#ffd771;*/
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+H2 {
+    font-weight: bold;
+    font-size: large;
+    color: #147098; /*#2581aa;*/
+    border-bottom: thin solid #f2b316; /*#ffd771;*/ /*#ffe299;    */
+}
+
+
+H3 {
+    font-weight: bold;
+    font-size: medium;
+    font-style: italic;
+    color: #061355;
+}
+
+DIV.foot {
+    margin-top: 2em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    border-top: thin groove #d5c222;
+}
+
+TABLE.schedule {
+    border-collapse: collapse;
+    /*width: 100%;*/
+}
+
+
+TABLE.schedule TD {
+    border: 2px solid white;
+    padding-left: 1ex;
+    padding-top: 0.5ex;
+    padding-bottom: 0.5ex;
+}
+
+TABLE.schedule TR.sched_week0 {
+    background-color: #fff1ce;
+}
+
+TABLE.schedule TR.sched_week1 {
+    background-color: #ffd2c8;/*#c6eaf9;*/
+}
+
+TABLE.schedule TD.date {
+    font-weight: bold;
+    padding-right: 4ex;
+
+}
+
+SPAN.extra {
+    color: #b72300; /*#b78300;*/
+}
+
+TD SPAN.extra::after {
+    content: " [Extra]";
+}

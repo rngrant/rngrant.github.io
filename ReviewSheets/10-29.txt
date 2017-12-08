@@ -1,0 +1,98 @@
+Input and output:
+
+
+1.) Suppose that we call scanf as follows:
+
+    float x,y;
+    int i;
+    scanf("%f%d%f", &x, &i, &y);
+
+    if the user enters
+
+    12.3 45.6 789
+
+    What will be the values of x,i, and y after the call?
+    
+2.) What output do the following calls of printf produce?
+    a.) printf("%6d, %4d", 86, 1040);
+    b.) printf("%12.5lf", 30.253);
+    c.) printf("%2d%5.2lf%d", 300,0.2,1024);
+
+Structures:
+3.)
+a.)Using typedef and a struct, declare a type named 
+complex, with two members, real and imaginary of type double.
+
+
+
+
+
+
+
+b.) Declare complex variables c1, and c2 with the same values. 
+Initialize them in different ways.
+
+
+
+
+c.) Write a function named make_complex that takes two doubles, and
+returns a complex with the given parameters
+
+
+complex make_complex(double real, double imaginary){
+
+
+
+
+
+}
+
+
+
+
+d.) Write a function named add_complex that takes two complex
+ number and adds the corresponding members of its arguments, 
+then returns the result.
+
+complex add_complex(complex c1, complex c2){
+
+
+
+
+
+
+
+}
+
+
+4.)Assume that the "time" structure contains three 
+members: hours, minutes and seconds. Write a function 
+that takes a long representing the time in seconds 
+since midnight, and returns a structure centaining the
+ equivalent time in hours (0-23), minutes (0-59), and seconds (0-59).
+
+struct time split_time(long total_seconds){
+
+
+
+
+
+
+}
+
+2D Arrays:
+
+5.) Write a program fragment that declares
+an 8x8 char array named checker_board then
+uses a loop to store the following data into
+the array
+
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+
