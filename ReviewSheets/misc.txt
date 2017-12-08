@@ -1,0 +1,49 @@
+Pointers and Malloc:
+1:Write function int * create_array(int n, int init_val) that creates an array of length n on the heap and initializes every value to init_val
+
+Linked Lists:
+2:Identify what's wrong with this code and fix it:
+node_t * p = list;
+while(p !=NULL) {
+  free(p);
+  p = p->next;
+}
+
+
+3: Write a function that takes a list and a node and adds an element to the end of a list with a for loop. Then with a while loop.
+
+void add_last(node_t * list, node_t * newnode) {
+
+
+
+
+
+
+
+
+}
+
+Stacks & Queues
+
+4:Write a program that evaluates a string of parentheses/braces/brackets and returns true if they are properly balanced. Use a stack struct with standard operations.
+
+Examples:
+(((( : false
+()   : True
+[()] : True
+[(]) : False
+{[[()]] : False
+
+
+5: What happens to queue during this program segment?
+Stack stack;
+while(! isEmpty(queue)) {
+  push(stack, dequeue(queue));
+}
+while(! isEmpty(stack)) {
+  enqueue(queue, pop(stack));
+}
+
+
+6: Write a main funciton that sums all of the given command line arguments. Check preconditions
+
