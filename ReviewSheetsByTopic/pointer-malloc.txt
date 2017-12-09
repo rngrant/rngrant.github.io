@@ -1,0 +1,36 @@
+Pointers and Malloc:
+
+1: Write a function named duplicate that uses dynamic storage
+allocation to create a copy of a string. For example, the call
+
+p = duplicate(str);
+
+would allocate space for a string of the same length as str,
+copy the contents of str into the new string, and return a
+pointer to it. Have duplicate return a null pointer if the
+memory allocation fails.
+
+char * duplicate(char * str){
+
+
+
+
+}
+
+
+
+2: Write the following function:
+
+int * create_array(int n, int initial_value);
+
+The function should return a pointer to a dynamically
+allocated array with n members, each of which is
+initialized to initial_value. The return value should
+be NULL if the array can't be allocated
+
+int * create_array(int n, int initial_value){
+
+
+
+
+}

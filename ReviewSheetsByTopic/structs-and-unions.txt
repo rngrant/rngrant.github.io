@@ -1,0 +1,117 @@
+Unions:
+
+1: Suppose that s is the following structure
+
+struct shape {
+       int shape_kind;
+       union
+       {
+       	     struct
+	     {
+		int height, width;
+	     } rectangle;
+	     struct
+	     {
+		int radius
+	     } circle;
+	}u;
+} s;
+
+
+Indicate which of the following statements are legal, and show how to
+repair the ones that aren't
+
+a.) s.shape_kind = 1;
+b.) s.height=25;
+c.) s.u.rectangle.width =8;
+d.) s.u.circle =5;
+
+Structures:
+
+2:
+a.)Using typedef and a struct, declare a type named 
+complex, with two members, real and imaginary of type double.
+
+
+
+
+
+
+
+b.) Declare complex variables c1, and c2 with the same values. 
+Initialize them in different ways.
+
+
+
+
+c.) Write a function named make_complex that takes two doubles, and
+returns a complex with the given parameters
+
+
+complex make_complex(double real, double imaginary){
+
+
+
+
+
+}
+
+
+
+
+d.) Write a function named add_complex that takes two complex
+ number and adds the corresponding members of its arguments, 
+then returns the result.
+
+complex add_complex(complex c1, complex c2){
+
+
+
+
+
+
+
+}
+
+
+3:Assume that the "time" structure contains three 
+members: hours, minutes and seconds. Write a function 
+that takes a long representing the time in seconds 
+since midnight, and returns a structure centaining the
+ equivalent time in hours (0-23), minutes (0-59), and seconds (0-59).
+
+struct time split_time(long total_seconds){
+
+
+
+
+
+
+}
+
+4: Modify  the functions you wrote above to work on pictures.
+
+Pixel averagePixels(Picture * pic, int pixelRow, int pixelColumn){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,121 @@
+Functions:
+
+1: The following function contains several errors. Fix them
+
+double triangle_area(double base, height)
+double product;
+{
+  product = base* height;
+  return product /2;
+}
+
+2: Write a function num_digits(n) that returns the number of digits in n ( an int)
+
+
+
+
+
+
+
+
+3: What will be the output of the following program
+
+# include <stdio.h>
+
+void swap (int a, int b);	// 1
+     	       	      		// 2
+int main(void)			// 3
+{   				// 4
+  int i =1, j =2;		// 5
+  \\Point A   			// 6
+  swap(i,j);			// 7
+  printf("i = %d, j = %d\n", i , j);// 8
+  \\ Point E  	      	       // 9
+  return 0;		       // 10
+} 	 		       // 11
+			       // 12
+void swap( int a , int b)      // 13
+{    	       	       	       // 14
+\\ Point B		       //15
+int temp = a;		       // 16
+\\ Point C 		       // 17
+  a = b;     		       // 18
+  b = temp;		       // 19
+  \\ Point D		       // 20
+}     			       // 21
+
+4: Do the stack diagrams for points A, B, C, D and E above
+
+
+A:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+
+--- main
+   
+
+B:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+   
+
+
+C:
+Program Counter:
+
+The Stack	 Output
+=========	 =========
+
+
+
+--- main
+
+
+D:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+   
+
+E:
+Program Counter: 
+
+The Stack	 Output
+=========	 =========
+
+
+    
+
+--- main
+   
+
+
+
+
+
+
+5.)  Write a function that takes 2 integers, and then returns true
+     if their product is divisible by 5 and 3. Can you write this
+     function without if statements?
+
+
+
+
+

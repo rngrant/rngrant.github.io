@@ -1,0 +1,13 @@
+The Preproccessor:
+0.) Write parameterized macros that compute the following values
+  a.) The cube of x.
+  b.) The remainder when n is divided by 4.
+  c.) 1 if the product of x and y is less than 100, 0 otherwise.
+
+
+1.) Let DOUBLE be the following macro:
+#define DOUBLE(X) 2*X
+
+a.) What is the value of DOUBLE(1+2)
+b.) What is the value of 4/DOUBLE(2)
+c.) Will this macro perform as expect? If not, fix it.

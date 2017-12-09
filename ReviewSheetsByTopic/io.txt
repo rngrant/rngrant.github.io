@@ -1,0 +1,160 @@
+Input and output:
+
+
+1.) Suppose that we call scanf as follows:
+
+    float x,y;
+    int i;
+    scanf("%f%d%f", &x, &i, &y);
+
+    if the user enters
+
+    12.3 45.6 789
+
+    What will be the values of x,i, and y after the call?
+    
+2.) What output do the following calls of printf produce?
+    a.) printf("%6d, %4d", 86, 1040);
+    b.) printf("%12.5lf", 30.253);
+    c.) printf("%2d%5.2lf%d", 300,0.2,1024);
+
+Characters Strings and I/O
+
+3: The following function calls supposedly write a single
+    new-line character, but some are incorrect. Identify
+    which calls don't work
+
+    a.) printf("%c",'\n');
+    b.) printf("%c", "\n");
+    c.) printf("%s", '\n');
+    d.) printf("%s", "\n");
+    e.) printf('\n');
+    f.) printf("\n");
+    g.) putchar('\n');
+    h.) putchar("\n");
+
+
+4: What will be the value of thst string s1 after the following
+    program fragment has been executed?
+
+    strcpy(s1, "computer");
+    strcpy(s2, "science");
+    if (strcmp(s1,s2)<0)
+       strcat(s1,s2);
+    else
+	strcat(s2,s1);
+    s1[strlen(s1)-6] = '\0';
+
+5: Write a function that takes a string ret, and an int size and
+    reads data into that string until it is full, or the user enters a
+    new line. Skip white space
+    
+void skip_whitespace(char * ret,int size){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+6: Write a function that reads in a given number of characters, then
+ prints our the result. If the char is an upper or lower case
+ character, switch the case. If the char is a digit print that number
+ of $ characters.
+
+void switch_case(int length){
+     
+
+
+
+
+
+}
+
+
+
+Command Line arguments /String manipulation:
+
+7: Given a string of ingredients in the form "applesauce,butter,clementines", i.e. strings separated by commas, write a function nth_ingredient, which takes a string of this form, and a number n, and returns the nth element in that list.  (Hint: use strtok). If n is larger than the number of elements in the list return null.
+
+char * nth_ingredient(char * list, int n){
+
+
+
+
+
+
+
+
+
+}
+
+
+8: Write the following function:
+bool test_extension (const char *file_name,
+     		     const char *extension);
+file_name points to a string containing a file name. The function should return true if the file's extension matches the string pointed to by extension, ignoring the case of letters. For example, the call test_extension("memo.txt", "TXT") would return true.
+(Hint: Use the toupper function, and strtok)
+bool test_extension (const char *file_name,
+     		     const char *extension){
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+Input Output:
+
+9: Write the following function:
+int line_length(const char *filename, int n);
+The function should return the length of the line n in the text file
+whose name is filename. If the line doesn't exist return 0;
+
+int line_length(const char *filename, int n){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+Combined review
+
+10:Given a stack with the following definition
+#define MAX_STACK_SIZE 50
+/* Size of all stack arrays */
+
+typedef struct {
+  int topPosition;
+  char * stackArray[MAX_STACK_SIZE];
+} stringStack;  
+
+
+and standard functions, write a function which takes a string similar
+to the type in problem 2, and stores it in the stack. Then, write a
+function that takes a stack, and writes its output to a file via
+popping 

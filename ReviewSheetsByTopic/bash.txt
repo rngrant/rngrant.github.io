@@ -1,0 +1,35 @@
+Bash:
+0: Write a script num_finals.sh that takes an integer as a command
+line argument, and returns an appropriate exclamation. i.e.
+./num_finals.sh 5
+>Oy vey
+./num_finals.sh 3
+>That seems manageable
+./num_finals.sh 0
+>You luck duck
+./num_finals.sh -1
+> Now thats just impossible
+
+
+#!/bin/bash
+
+
+
+
+
+
+
+
+
+
+1:Write a script that takes a file containing a list of single digits separated by newlines, echos the result of applying the previous script to each line, sorted in the file
+
+#!/bin/bash
+
+
+
+
+
+
+
+
