@@ -89,12 +89,10 @@ struct time split_time(long total_seconds){
 
 }
 
-4: Modify  the functions you wrote above to work on pictures.
-
-Pixel averagePixels(Picture * pic, int pixelRow, int pixelColumn){
-
-
-
+Stacks & Queues
+4:Write a program that evaluates a string of
+parentheses/braces/brackets and returns true if they are properly
+balanced. Use a stack struct with standard operations.
 
 
 
@@ -108,10 +106,11 @@ Pixel averagePixels(Picture * pic, int pixelRow, int pixelColumn){
 
 
 
-
-
-
-
-
-
+5: What happens to queue during this code segment?
+Stack stack;
+while(! isEmpty(queue)) {
+  push(stack, dequeue(queue));
+}
+while(! isEmpty(stack)) {
+  enqueue(queue, pop(stack));
 }
