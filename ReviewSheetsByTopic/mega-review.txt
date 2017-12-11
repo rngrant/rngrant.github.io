@@ -1,0 +1,660 @@
+Linked Lists:
+
+Consider the following definitions
+
+typedef struct node node_t;
+
+struct node {
+  int value;
+  node_t* next;
+};
+
+1: Write a function which given a pointer to a list and an integer,
+   appends a node to the front of the list, with the
+   given integer value. Then, modify the list to point
+   to the new node
+
+void addNode (int val , node_t ** list) {
+
+
+
+
+
+
+
+
+}
+
+2: Write a function that prints out the contents of a list
+
+void printList(node_t* list){
+
+
+
+
+
+
+
+}
+
+
+3: Write a function that sums all of the node of the list
+int sum_list(node_t* list){
+
+
+
+
+
+
+
+
+}
+
+4: Write a function that given two lists appends the second
+   to the end of the first list
+void appendLists(node_t* list1, node_t* list2){
+
+
+
+
+
+
+
+}
+
+
+5: The previous function requires a loop to get to the last
+   element of the first list. You can design a list such that
+   you don't need a loop to append two lists.
+   
+   How would you design such a list.  After doing so, write a
+   function to append two lists
+
+
+
+
+
+
+
+Input and Output:
+
+
+1: Suppose that we call scanf as follows:
+
+    float x,y;
+    int i;
+    scanf("%f%d%f", &x, &i, &y);
+
+    if the user enters
+
+    12.3 45.6 789
+
+    What will be the values of x,i, and y after the call?
+    
+2: What output do the following calls of printf produce?
+    a.) printf("%6d, %4d", 86, 1040);
+    b.) printf("%12.5lf", 30.253);
+    c.) printf("%2d%5.2lf%d", 300,0.2,1024);
+
+
+3: What will be the value of the string s1 after the following
+    program fragment has been executed?
+
+    strcpy(s1, "computer");
+    strcpy(s2, "science");
+    if (strcmp(s1,s2)<0)
+       strcat(s1,s2);
+    else
+	strcat(s2,s1);
+    s1[strlen(s1)-6] = '\0';
+
+4: Write a function that takes a string ret, and an int size and
+    reads data into that string until it is full, or the user
+    enters a new line. Skip white space
+    
+void skip_whitespace(char * ret,int size){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+5: Write a function that reads in a given number of characters, then
+ prints out the result. If the char is an upper or lower case
+ character, switch the case. If the char is a digit print that number
+ of $ characters.
+
+void switch_case(int length){
+     
+
+
+
+
+
+}
+
+6: Given a string of ingredients in the form "applesauce,butter,clementines", i.e. strings separated by commas, write a function nth_ingredient, which takes a string of this form, and a number n, and returns the nth element in that list.  (Hint: use strtok). If n is larger than the number of elements in the list return null.
+
+char * nth_ingredient(char * list, int n){
+
+
+
+
+
+
+
+
+
+}
+
+
+7: Write the following function:
+bool test_extension (const char *file_name,
+     		     const char *extension);
+file_name points to a string containing a file name. The function should return true if the file's extension matches the string pointed to by extension, ignoring the case of letters. For example, the call test_extension("memo.txt", "TXT") would return true.
+(Hint: Use the toupper function, and strtok)
+bool test_extension (const char *file_name,
+     		     const char *extension){
+
+
+
+
+
+
+
+
+
+
+
+}
+
+8: Write the following function:
+int line_length(const char *filename, int n);
+The function should return the length of the line n in the text file
+whose name is filename. If the line doesn't exist return 0;
+
+int line_length(const char *filename, int n){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+malloc and free:
+
+1: Write a function named duplicate that uses dynamic storage
+allocation to create a copy of a string. For example, the call
+
+p = duplicate(str);
+
+would allocate space for a string of the same length as str,
+copy the contents of str into the new string, and return a
+pointer to it. Have duplicate return a null pointer if the
+memory allocation fails.
+
+char * duplicate(char * str){
+
+
+
+
+}
+
+
+
+2: Write the following function:
+
+int * create_array(int n, int initial_value);
+
+The function should return a pointer to a dynamically
+allocated array with n members, each of which is
+initialized to initial_value. The return value should
+be NULL if the array can't be allocated
+
+int * create_array(int n, int initial_value){
+
+
+
+
+}
+
+Bash Scripts:
+Bash:
+1: Write a script num_finals.sh that takes an integer as a command
+line argument, and returns an appropriate exclamation. i.e.
+./num_finals.sh 5
+>Oy vey
+./num_finals.sh 3
+>That seems manageable
+./num_finals.sh 0
+>You luck duck
+./num_finals.sh -1
+> Now thats just impossible
+
+
+#!/bin/bash
+
+
+
+
+
+
+
+
+
+
+2:Write a script that takes a file containing a list of single digits
+separated by newlines, echos the result of applying the previous
+script to each line, sorted in the file
+
+#!/bin/bash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function Pointers:
+1.) Write a function map, which takes an array, it's size, and a
+function that takes in an int and returns an int, and then updates
+the array such that the function is applied to every element.
+
+void map(int arr[],int size,int func (int)){
+
+
+
+
+
+
+
+
+}
+
+2.) Write a function apply, which takes an array, it's size, and a
+function that takes in two ints, and returns the result of iteratively applying the given function to all the elements in the array. Assume the size of the array given is always 2 or greater
+
+
+
+
+
+
+
+
+
+3.) What is the output of the following program
+#include <stdio.h>
+
+int f1 (int (*f) (int));
+int f2(int i);
+
+int main(void)
+{
+  printf("Answer: %d\n", f1(f2));
+  return 0;
+}
+  
+int f1(int (*f)(int))
+{
+  int n = 0;
+  while ((*f)(n))
+    {
+      n++;
+    }
+  
+  return n;
+  }
+  
+  int f2(int i)
+  {   
+    return i * i + i - 12;
+  }
+
+
+
+
+
+
+
+
+Stacks and Queues:
+4:Write a program that evaluates a string of
+parentheses/braces/brackets and returns true if they are properly
+balanced. Use a stack struct with standard operations.
+
+
+
+
+
+
+5: What happens to queue during this code segment?
+Stack stack;
+while(! isEmpty(queue)) {
+  push(stack, dequeue(queue));
+}
+while(! isEmpty(stack)) {
+  enqueue(queue, pop(stack));
+}
+
+
+Arrays and Pointers:
+1: What will the following program fragment output
+
+int arr[] = {1,2,-3,4,5,8};		      
+  int min, max;
+  max_min(arr,4,&min,&max);
+  printf("min = %d, max = %d\n", min , max);
+
+2: What will the following program fragment output
+
+int arr[] = {1,2,-3,4,5,8};
+int* a = &arr[3];
+printf("a[-2] = %d\n", a[-2]);
+
+3: Write a function that takes two arrays of integers, and their
+sizes, and modifies the first array to contain the minimum of
+comparing them by elements. 
+
+
+
+
+
+4:
+The following function supposedly computes the sum and average
+of the numbers in the array arr, which has length n. avg and
+sum point to variables that the function should modify.
+Unfortunately, the function contains several errors: find and
+correct them.
+
+void avg_sum(double arr[], int n, double *avg, double sum){
+{
+int i;
+sum = 0.0;
+for (i = 0; i <n ; i++)
+    sum += arr[i];
+   avg = sum / n;
+}
+
+
+5: Write a function that takes an integer array arr, with length n,
+and calculates and assigns the maximum and minimum values
+
+void max_min(int arr[],int n,int * min, int* max){
+
+
+
+}
+
+6:Suppose
+int a[] = {5, 15, 34, 54, 14, 2, 52, 72};
+int *p= &a[1];
+int *q=&a[5];
+
+(a) What is the value of *(p+3)?
+(b) What is the value of *(q-3)?
+(c) Is the condition p < q true of false?
+(d) Is the condition *p < *q true of false?
+
+
+7: What will the contents of the array a be after the following code is executed?
+#define N 10
+
+int a[N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int *p=&a[0], *q=&a[N-1], temp;
+
+while (p < q)
+{
+ temp = *p;
+ *p++ = *q;
+ *q-- = temp;
+}
+
+Binary:
+0: Represent the following numbers as a 4 bit number
+in two's compliment notation
+
+A.) 5
+B.) -2
+C.)-7
+
+1: Represent the following numbers in IEEE single-precision
+representation
+
+A.) 1.0 :
+
+
+B.) 3.25 :
+
+
+C.) -0.125:
+
+
+D.) 63.375:
+
+
+2:
+a.) What is the binary decimal representation of  71?
+b.) What is the signed magnitude representation of -71?
+c.) What is the ones complement representation of -71?
+d.) What is the twos complement representation of -71?
+e.) What is the IEEE floating point representation of -71?
+
+
+
+3: Determine integer that results from
+the following expressions
+A.) 7 & 5
+B.) 8 | 3
+C.) 9 << 2
+D.) 6 ^ 3
+E.) ~(-3)
+
+
+Structs:
+
+1:
+a.)Using typedef and a struct, declare a type named 
+complex, with two members, real and imaginary of type double.
+
+
+
+
+
+
+
+b.) Declare complex variables c1, and c2 with the same values. 
+Initialize them in different ways.
+
+
+
+
+c.) Write a function named make_complex that takes two doubles, and
+returns a complex with the given parameters
+
+
+complex make_complex(double real, double imaginary){
+
+
+
+
+
+}
+
+
+
+
+d.) Write a function named add_complex that takes two complex
+ number and adds the corresponding members of its arguments, 
+then returns the result.
+
+complex add_complex(complex c1, complex c2){
+
+
+
+
+
+
+
+}
+
+
+2:Assume that the "time" structure contains three 
+members: hours, minutes and seconds. Write a function 
+that takes a long representing the time in seconds 
+since midnight, and returns a structure centaining the
+ equivalent time in hours (0-23), minutes (0-59), and seconds (0-59).
+
+struct time split_time(long total_seconds){
+
+
+
+
+
+
+}
+
+
+
+
+2D Array:
+
+
+1: Write a program fragment that declares
+an 8x8 char array named checker_board then
+uses a loop to store the following data into
+the array
+
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+B R B R B R B R
+R B R B R B R B
+
+2: Write a function averagePoint, which takes a 2D array
+   of integers, and a location within that array, and
+   returns the integer which is the average of that point in the
+   array, and all adjacent points. If the point is on the edge of
+   the 2D array, you should only average the points within the
+   boundaries. If the point is outside of the 2D array, return
+   0. Assume ROWS and COLUMNS are defined to be the size of the array
+   you are working with
+
+int averagePoint(int grid[ROWS][COLUMNS] , int pointRow, int pointColumn){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+3: Write a function average2DArray, which set every value to be the
+   average of itself and its neighbors, using the function we wrote
+   above.Assume ROWS and COLUMNS are defined to be the size of the array
+   you are working with.
+   
+
+void average2DArray(int grid[ROWS][COLUMNS]){
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+There is a subtle danger here, can you catch it? Hint, applying this
+function to
+
+0  0 0
+0 12 0
+0  0 0
+
+should result in
+
+3 2 3          3 2 3
+2 1 2   Not    2 2 1
+3 2 3          1 1 1
+
+
+4: Assume ROWS and COLUMNS are defined constants. Write a program
+ void add_matrices(int arr1[ROWS][COLUMNS], int arr2[ROWS][COLUMNS])
+ that performs matrix addition(adding numbers in corresponding 
+ indices)changes arr1 to that matrix.
+ 
+ void add_matrices(int arr1[ROWS][COLUMNS], int arr2[ROWS][COLUMNS]){
+
+
+
+
+
+}
+
+5: Write a function add_rows, which takes in a 2D array, and a array
+ with COLUMNS rows row_sum, and stores the sum of each row in
+ row_sum.
+
+void add_rows(int arr[ROWS][COLUMNS],int row_sum[COLUMNS]){
+
+
+
+
+
+
+
+
+
+
+
+}
+
