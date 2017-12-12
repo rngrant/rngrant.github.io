@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Corners</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://d3js.org/d3.v4.min.js">
+</script>
+
+ <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+<script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous">
+</script>
+
+</head>
+
+<body class="standard-padding">
+<h1>Corners Explaination</h1>
+ <ol class="breadcrumb">
+        <li><a href="index.html" class="active">Game</a></li>
+	<li><a href="explain.html">Explanation</a></li>
+      </ol>   
+
+      <p>
+      <h2>How to play this game:</h2>
+      The goal of the game is to form the corners of a square. This
+      square can be along the standard grid,such as the following,
+      made by white
+      </p>
+      <img src="gridsquare.png" alt="Grid Square" style="width:200px;height:250px">
+      <p>
+      or the square can tilted like one of the following.
+      </p>
+      
+      <img src="tiltedsquare.png" alt="Tilted Square" style="width:200px;height:250px">
+
+      <img src="knightssquare.png" alt="Kights Square" style="width:200px;height:250px">
+      
+      <p>
+      Players alternate turns placing down pieces until one of them
+      successfully forms a square.
+      </p>
+
+      <p>
+      <h2>Settings:</h2>
+      <h4>Board and Dimensions</h4>
+      The "new board" button will generate a new board with the selected
+      dimension. The undo button will undo the last move that was
+      made.
+
+      <h4>Minimum Square Size</h4>
+      This option controls how large a square has to be for it to
+      count as forming a square.
+      The "not all touching" option is the default, doesn't count
+      squares where all corners are adjacent like the following      
+      </p>
+
+      <img src="smallSquare.png" alt="Small Square" style="width:200px;height:250px">
+      
+      <p>
+      The "not touching" option doesn't count a square in which
+      any corners touch. This prevents the square above
+      from counting, and prevents the following from counting as well.
+      </p>
+      
+      <img src="tiltedsquare.png" alt="Tilted Square"
+      style="width:200px;height:250px">
+      
+
+      <p>The final option is "any size". This option counts a square
+      of any size. All of the above options are implemented after
+      board has been refreshed by pressing the "new board" button.</p>
+
+      <p>
+      <h4>Checkable options</h4>
+      There are two options that can be checked on and off, show move
+      numbers, and show forced squares. Turning on show move numbers
+      labels every piece with the order in which it was placed down,
+      and turning on show forced squares shows when a player could
+      complete a square by moving at a location.
+      </p>
+      <p>
+      <h2>Who made this game:</h2>
+      This game was invented by Professor Marc Chamberland of Grinnell
+      College, and implemented by Reilly Grant.
+      </p>
+
+      
+      </body>
+      </html>

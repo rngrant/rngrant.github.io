@@ -1,11 +1,4 @@
 Arrays:
-1: What will the following program fragment output
-
-int arr[] = {1,2,-3,4,5,8};		      
-  int min, max;
-  max_min(arr,4,&min,&max);
-  printf("min = %d, max = %d\n", min , max);
-
 2: What will the following program fragment output
 
 int arr[] = {1,2,-3,4,5,8};
