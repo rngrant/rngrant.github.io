@@ -26,6 +26,9 @@ setupSettings();
 
 /*Setup and Display functions*/
 
+/* 
+ * Main function to setup the graphics for the game
+ */
 function setupSettings(){
     var config = d3.select("#otherSettings");
     setupShowMoves(config);
@@ -35,7 +38,10 @@ function setupSettings(){
     setupSquaresize();      
 }
 
-
+/* 
+ * Main function to display the game board
+ * dimension: the current dimension selected for the gameboard
+ */
 function displayGame(dimension){
     var svg = initSvg(dimension);
     displaySquares(svg);
@@ -44,6 +50,11 @@ function displayGame(dimension){
 }
 
 /*Helper methods for setupSettings*/
+
+/* 
+ * set up of the showMoves checkbox 
+ * config: the location to append settings
+ */
 function setupShowMoves(config){
     config.append('label')
     .attr('for', 'showMoves')
@@ -57,6 +68,11 @@ function setupShowMoves(config){
 	    updateBoard();
 	});
 }
+
+/* 
+ * set up the showChecks checkbox
+ * config: the location to append settings
+ */
 function setupShowChecks(config){
     config.append('label')
 	.attr('for', 'showChecks')
@@ -70,6 +86,11 @@ function setupShowChecks(config){
 	    updateBoard();
 	});
 }
+
+/*
+ * set up the play AI checkbox
+ * config: the location to append settings
+ */
 function setupPlayAI(config){
     config.append('label')
 	.attr('for', 'playAI')
@@ -88,9 +109,10 @@ function setupPlayAI(config){
 	});
 }
 
-
+/* 
+ * Setup dimension box   
+ */
 function setupDimensions(){
-    // Setup dimension    
     d3.select('#dimensions')
 	.append('input')
 	.attr('id','dimension')
@@ -101,6 +123,10 @@ function setupDimensions(){
 	});    
     d3.select('#dimOption'+curDimension).attr('selected','true');
 }
+
+/*
+ * Setup the square size options list
+ */
 function setupSquaresize(){
     d3.select('#squareSizes')
 	.append('select')
@@ -122,9 +148,15 @@ function setupSquaresize(){
 }
 
 /*Helper methods for displayGame*/
+
+/*
+ * initialize the svg which contains the board
+ * dimension: the dimension to make the svg
+ */
 function initSvg(dimension){
     d3.select('#svg-area').select('svg').remove();
 
+    // initialize the board as a list of squares
     for (var i=0; i <dimension; i++)
     {
 	for (var j =0; j <dimension; j++)
@@ -133,7 +165,7 @@ function initSvg(dimension){
 	    board.push(square);
 	}
     }    
-    
+    // append svg with the appropriate size
     var svg = d3.select('#svg-area')
 	.append('svg')
 	.attr('width',dimension*squareSize)
@@ -141,6 +173,10 @@ function initSvg(dimension){
     return svg;
 }
 
+/*
+ * Display squares which are initialized in the game board
+ * svg: the svg on which to display the squares in the board
+ */
 function displaySquares(svg){
     svg.selectAll('rect')
 	.data(board)
@@ -156,6 +192,10 @@ function displaySquares(svg){
 	.style('fill','green')
 }
 
+/*
+ * Append pieces represented by circles to the svg board
+ * svg : the svg to append the pieces to
+ */
 function displayPieces(svg){
     svg.selectAll('circle')
 	.data(board)
@@ -169,6 +209,10 @@ function displayPieces(svg){
 	.on('click', playerMove);
 }
 
+/*
+ * append piece numbers to each piece
+ * svg : the svg to append the piece number to
+ */
 function displayPieceNums(svg){
     svg.selectAll('text')
 	.data(board)
@@ -181,6 +225,10 @@ function displayPieceNums(svg){
 	.attr('id',function(d){return "text"+d.x+"-"+d.y;});
 }
 
+/*
+ * Active the player move on a piece being clicked
+ * d : the piece which the player clicked on
+ */
 function playerMove(d) {
     if (d.piece=="empty" && !done){
 	d.moveId = moves.length;

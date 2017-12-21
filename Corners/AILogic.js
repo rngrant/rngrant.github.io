@@ -1,5 +1,8 @@
 var infinity = 1000000;
 
+/*
+ * Function which controls response of the AI if playAI is true
+ */
 function AIMove(){
     if (AIColor == whiteTurn && !done)
     {
@@ -16,6 +19,12 @@ function AIMove(){
     }    
 }
 
+/*
+ * Function which returns the move the AI should make given
+ * moves : List of moves already made on the board
+ * curDimension: The current dimension of the board
+ * AIColor :
+ */
 function AIMoveSearch(moves,curDimension,AIColor)
 {
     var moveBoard = generateMoveBoard(moves);
