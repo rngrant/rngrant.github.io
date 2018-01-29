@@ -1,0 +1,61 @@
+Basic C and Terminal Knowledge
+
+1. Write a program that prints out both the area and the perimeter of a rectangle with the given dimensions:
+7.5’’ by 11’’ 
+8’’ by 4’’
+Example:
+When given values for a rectangle that is 2’’ by 3’’ the program prints:
+
+        Perimeter  Area
+ Rectangle 1:     10          6
+
+#include <stdio.h>
+
+int main ()
+{
+  /* declare variables */
+  double width1, height1, perimeter1, area1;
+  int width2, height2, perimeter2, area2;  
+
+  /* initialization */
+  width1 = 7.5;
+  height1 = 11.0;
+  width2 = 8;
+  height2 = 4;
+/* compute perimeters and areas */  
+  perimeter1 = 2 * width1 + 2 * height1;
+  perimeter2 = 2 * width2 + 2 * height2;
+  area1 = width1 * height1;
+  area2 = width2 * height2;
+  
+  /* print table of results */
+  /* Notice that in the table 
+ printf ("\t \t Perimeter  Area\n");  //table title
+  /* report results to 1 decimal place */
+  printf ("Rectangle 1:   %5.1lf %5.1lf\n", perimeter1, area1);
+  printf ("Rectangle 2:   %d %d\n", perimeter2, area2);
+  
+  /* tell operating system "no errors" */
+  return 0;
+}
+
+2. How do you write single line and block comments in C?
+// for single line comments
+/* */ for block comments
+
+3. To practice terminal commands (cd, mv, less, ls, pwd, ect) play Terminus (http://www.mprat.org/Terminus/).
+
+4. Follow-up on File Permissions (Not expected knowledge, simply interesting):
+Suppose you are in Prof. Walker’s directory ~walker/public_html/MyroC/MyroC.3.2/MyroC.3.2a
+and upon running the command “ls -l” you see the following file.
+-rwxr-xr-x 1 walker mathfac  1201 Aug 21  2016 README.txt
+Write the terminal commands that change the permissions of the file below to -rw-r--r--.
+
+There are 3 groups we can change permissions for user, group and world. Additionally there are three capabilities each group might have, read (4), write (2), execute (1). 
+Each of the 3 groups gets one number representing it’s permissions. Notice that the sum of each of the capabilities (some combination of 0 or 4, 0 or 2, and 0 or 1) is different for each combination.
+
+chmod 644 README.txt
+
+
+
+
