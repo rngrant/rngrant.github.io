@@ -1,0 +1,52 @@
+Basic C and Terminal:
+
+1. Write a program that prints out both the area and the perimeter of a rectangle with the given dimensions:
+7.5’’ by 11’’ 
+8’’ by 4’’
+Example:
+When given values for a rectangle that is 2’’ by 3’’ the program prints:
+
+        Perimeter  Area
+ Rectangle 1:     10          6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. How do you write single line and block comments in C?
+
+
+
+
+3. To practice terminal commands (cd, mv, less, ls, pwd, ect) play Terminus (http://www.mprat.org/Terminus/).
+
+4. Follow-up on File Permissions (Not expected knowledge, simply interesting):
+Suppose you are in Prof. Walker’s directory ~walker/public_html/MyroC/MyroC.3.2/MyroC.3.2a
+and upon running the command “ls -l” you see the following file.
+-rwxr-xr-x 1 walker mathfac  1201 Aug 21  2016 README.txt
+Write the terminal commands that change the permissions of the file below to -rw-r--r--.
+
+
+
+
+
