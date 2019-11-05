@@ -1,3 +1,3 @@
-# pages0.github.io
+# rngrant.github.io
 
 Personal website of Reilly Noonan Grant
